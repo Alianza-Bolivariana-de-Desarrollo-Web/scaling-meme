@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TCG-Server\\Documents\\GitHub\\scaling-meme\\scaling-meme\\scaling-meme.csproj",
+      "projectUniqueName": "C:\\Users\\TCG-Server\\Documents\\GitHub\\scaling-meme\\scaling-meme.csproj",
       "projectName": "scaling-meme",
-      "projectPath": "C:\\Users\\TCG-Server\\Documents\\GitHub\\scaling-meme\\scaling-meme\\scaling-meme.csproj",
+      "projectPath": "C:\\Users\\TCG-Server\\Documents\\GitHub\\scaling-meme\\scaling-meme.csproj",
       "packagesPath": "C:\\Users\\TCG-Server\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TCG-Server\\Documents\\GitHub\\scaling-meme\\scaling-meme\\obj\\",
+      "outputPath": "C:\\Users\\TCG-Server\\Documents\\GitHub\\scaling-meme\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\TCG-Server\\AppData\\Roaming\\NuGet\\NuGet.Config",

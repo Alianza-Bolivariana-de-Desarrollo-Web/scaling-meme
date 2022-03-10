@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace scaling_meme
+namespace clui.scaling_meme
 {
     class Program
     {
