@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\TCG-Server\\.nuget\\packages\\": {}
+    "C:\\Users\\Alumno\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TCG-Server\\Documents\\GitHub\\scaling-meme\\scaling-meme.csproj",
+      "projectUniqueName": "C:\\Users\\Alumno\\Documents\\GitHub\\scaling-meme\\scaling-meme.csproj",
       "projectName": "scaling-meme",
-      "projectPath": "C:\\Users\\TCG-Server\\Documents\\GitHub\\scaling-meme\\scaling-meme.csproj",
-      "packagesPath": "C:\\Users\\TCG-Server\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TCG-Server\\Documents\\GitHub\\scaling-meme\\obj\\",
+      "projectPath": "C:\\Users\\Alumno\\Documents\\GitHub\\scaling-meme\\scaling-meme.csproj",
+      "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Alumno\\Documents\\GitHub\\scaling-meme\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\TCG-Server\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

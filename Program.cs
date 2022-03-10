@@ -6,7 +6,8 @@ namespace clui.scaling_meme
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Bienvenido al proyecto: Fechas y Edades");
+
         }
     }
 }
