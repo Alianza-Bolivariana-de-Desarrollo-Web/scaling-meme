@@ -15,11 +15,21 @@ namespace scaling_meme
         public static int CalcularEdadAños(DateTime añoDado)
         {
             DateTime diaActual = DateTime.Today;
-            const int posicionAño = 2; 
-             DateTime añoDevolver = diaActual-añoDado;
-            int Edad = año - FechaActual[posicionAño];
 
-            return Edad;
+             int restaAños = diaActual.Year-añoDado.Year;
+            Console.WriteLine(restaAños);
+
+            return restaAños;
+        }
+
+        public static int CalcularEdadDias(DateTime añoDado)
+        {
+            DateTime diaActual = DateTime.Today;
+
+            int restaAños = diaActual.DayOfYear - añoDado.Year;
+            Console.WriteLine(restaAños);
+
+            return restaAños;
         }
     }
 }
