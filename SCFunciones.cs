@@ -1,22 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Globalization;
 
 namespace clui.scaling_meme
 {
-    class SCFunciones
+    public class SCFunciones
     {
-        /// <summary>
-        /// Devuelve bool como resultado de la comprobación de un string como fecha.
-        /// </summary>
-        /// <param name="stringFecha">Argumento de tipo string con el valor de la fecha (Ej. "01/01/2022").</param>
-        /// <param name="locale">Argumento de tipo string con el valor de la localización (Ej. es).</param>
-        /// <returns>true ó false (true = es una fecha válida, false = no es una fecha válida).</returns>
-        public static bool ValidarFecha(string stringFecha, string locale)
-        {
-            DateTime dateTimeObject = new DateTime();
-            return ValidarFecha(stringFecha, locale, ref dateTimeObject);
-        }
         /// <summary>
         /// Devuelve bool como resultado de la comprobación de un string como fecha.
         /// </summary>
@@ -24,7 +12,7 @@ namespace clui.scaling_meme
         /// <param name="locale">Argumento de tipo string con el valor de la localización (Ej. es).</param>
         /// <param name="dateTimeObject">Asigna el valor convertido de string a DateTime.</param>
         /// <returns>true ó false (true = es una fecha válida, false = no es una fecha válida).</returns>
-        public static bool ValidarFecha(string stringFecha, string locale, ref DateTime dateTimeObject)
+        public static bool ValidarFecha(string stringFecha, string locale)
         {
             bool returnStatus = false;
             if (stringFecha.Trim().Length != 10)
@@ -45,7 +33,6 @@ namespace clui.scaling_meme
                                         if (valoresFecha[2].Length == 4)
                                         {
                                             returnStatus = true;
-                                            dateTimeObject = new DateTime(valorDia + '/' + valorMes + '/' + valorAnio);
                                         }
                                         else
                                         {
