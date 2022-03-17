@@ -26,10 +26,10 @@ namespace scaling_meme
         {
             DateTime diaActual = DateTime.Today;
 
-            int restaAños = diaActual.DayOfYear - añoDado.Year;
-            Console.WriteLine(restaAños);
+            int restaDias = diaActual.DayOfYear - añoDado.DayOfYear;
+            Console.WriteLine(restaDias);
 
-            return restaAños;
+            return restaDias;
         }
     }
 }

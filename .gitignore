@@ -19,3 +19,5 @@ obj/project.nuget.cache
 obj/scaling-meme.csproj.nuget.dgspec.json
 obj/scaling-meme.csproj.nuget.g.props
 .vs/scaling-meme/v16/.suo
+obj/Debug/netcoreapp3.1/scaling-meme.GeneratedMSBuildEditorConfig.editorconfig
+obj/Debug/netcoreapp3.1/scaling-meme.assets.cache
