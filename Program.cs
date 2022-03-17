@@ -13,7 +13,10 @@ namespace clui.scaling_meme
                 string segundaFecha = NDFunciones.SolicitarFecha();
                 if (SCFunciones.ValidarFecha(segundaFecha, "es"))
                 {
-
+                    /*
+                     * CultureInfo cultureInfoES = new CultureInfo("es-ES");
+                        DateTime fechaUno = Convert.ToDateTime(primeraFecha, cultureInfoES);
+                           MMFunciones.CalcularEdad(fechaUno);*/
                 }
                 else
                 {
