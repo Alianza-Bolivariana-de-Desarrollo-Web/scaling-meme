@@ -9,8 +9,7 @@ namespace clui.scaling_meme
         /// <summary>
         /// Solicita una fecha para luego comprobar si el formato de esta es correcto
         /// </summary>
-        /// <param name="entradaFecha">string que contiene la fecha</param>
-        /// <returns></returns>
+        /// <returns>Devuelve un string con la entrada introducida</returns>
         public static string SolicitarFecha()
         {       
             string entradaFecha = "";
