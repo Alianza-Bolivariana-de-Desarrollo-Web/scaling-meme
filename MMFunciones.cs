@@ -12,24 +12,23 @@ namespace scaling_meme
         /// </summary>
         /// <param name="fecha">array que contiene la fecha</param>
         /// <returns></returns>
-        public static int CalcularEdadAños(DateTime añoDado)
+        public static int CalcularEdadAños(DateTime año1,DateTime año2)
         {
-            DateTime diaActual = DateTime.Today;
 
-             int restaAños = diaActual.Year-añoDado.Year;
-            Console.WriteLine(restaAños);
+
+             int restaAños = año1.Year-año2.Year;
+
 
             return restaAños;
         }
 
-        public static int CalcularEdadDias(DateTime añoDado)
+        public static int CalcularEdadDias(DateTime año1, DateTime año2)
         {
-            DateTime diaActual = DateTime.Today;
 
-            int restaDias = diaActual.DayOfYear - añoDado.DayOfYear;
-            Console.WriteLine(restaDias);
+            int restaAños = año1.DayOfYear - año2.DayOfYear;
 
-            return restaDias;
+
+            return restaAños;
         }
     }
 }
