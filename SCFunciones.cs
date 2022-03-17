@@ -15,7 +15,7 @@ namespace clui.scaling_meme
         public static bool ValidarFecha(string stringFecha, string locale)
         {
             bool returnStatus = false;
-            if (stringFecha.Trim().Length != 10)
+            if (stringFecha.Trim().Length == 10)
             {
                 if (locale == "es")
                 {
