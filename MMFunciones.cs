@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Itenso.TimePeriod;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace clui.scaling_meme
+namespace scaling_meme
 {
     class MMFunciones
     {
@@ -12,7 +13,7 @@ namespace clui.scaling_meme
         /// </summary>
         /// <param name="fecha">array que contiene la fecha</param>
         /// <returns></returns>
-        public static int CalcularEdadAños(DateTime fecha1,DateTime fecha2)
+        public static int CalcularedadAños(DateTime fecha1,DateTime fecha2,bool fecha1Bisiesta,bool fecha2Bisiesta)
         {
 
 
@@ -30,11 +31,15 @@ namespace clui.scaling_meme
 
             return restaFecha;
         }
-
-
-        public static void CalcularAños()
+        public static string CalcularEdadAñosYDias(DateTime fecha1, DateTime fecha2, bool fecha1Bisiesta, bool fecha2Bisiesta)
         {
+            DateDiff restaFecha = new DateDiff(fecha1,fecha2);
+            string retorno = (restaFecha.Years +' '+ restaFecha.Days).ToString();
 
+            return  retorno ;
         }
+
+
+
     }
 }
