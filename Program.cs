@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace clui.scaling_meme
 {
@@ -12,11 +13,13 @@ namespace clui.scaling_meme
             {
                 string segundaFecha = NDFunciones.SolicitarFecha();
                 if (SCFunciones.ValidarFecha(segundaFecha, "es"))
-                {
-                    /*
-                     * CultureInfo cultureInfoES = new CultureInfo("es-ES");
-                        DateTime fechaUno = Convert.ToDateTime(primeraFecha, cultureInfoES);
-                           MMFunciones.CalcularEdad(fechaUno);*/
+                {                   
+                    CultureInfo cultureInfoES = new CultureInfo("es-ES");
+                    DateTime fechaUno = Convert.ToDateTime(primeraFecha, cultureInfoES);
+                    DateTime fechaDos = Convert.ToDateTime(segundaFecha, cultureInfoES);
+                    int diferenciaAños=MMFunciones.CalcularEdadAños(fechaUno, fechaDos);
+                    int diferenciaDias= MMFunciones.CalcularEdadDias(fechaUno, fechaDos);
+
                 }
                 else
                 {
