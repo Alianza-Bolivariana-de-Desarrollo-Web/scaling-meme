@@ -12,23 +12,29 @@ namespace scaling_meme
         /// </summary>
         /// <param name="fecha">array que contiene la fecha</param>
         /// <returns></returns>
-        public static int CalcularEdadAños(DateTime año1,DateTime año2)
+        public static int CalcularEdadAños(DateTime fecha1,DateTime fecha2)
         {
 
 
-             int restaAños = año1.Year-año2.Year;
+             int restaFecha = fecha1.Year-fecha2.Year;
 
 
-            return restaAños;
+            return restaFecha;
         }
 
-        public static int CalcularEdadDias(DateTime año1, DateTime año2)
+        public static int CalcularEdadDias(DateTime fecha1, DateTime fecha2)
         {
 
-            int restaAños = año1.DayOfYear - año2.DayOfYear;
+            int restaFecha = fecha1.DayOfYear - fecha2.DayOfYear;
 
 
-            return restaAños;
+            return restaFecha;
+        }
+
+
+        public static void CalcularAños()
+        {
+
         }
     }
 }
