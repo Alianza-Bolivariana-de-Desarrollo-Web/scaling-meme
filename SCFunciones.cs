@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Itenso.TimePeriod;
+using System;
 using System.Globalization;
 
 namespace clui.scaling_meme
@@ -82,6 +83,16 @@ namespace clui.scaling_meme
                 returnStatus = false;
             }
             return returnStatus;
+        }
+        public static int[] DiferenciaFechaAC(DateTime fecha1, DateTime fecha2)
+        {
+            int[] diferenciaAniosDias = new int[2];
+            DateTime fechaZero = new DateTime(1, 1, 1);
+            DateDiff restaFecha1 = new DateDiff(fecha1, fechaZero);
+            DateDiff restaFecha2 = new DateDiff(fecha2, fechaZero);
+            diferenciaAniosDias[0] = Math.Abs(restaFecha1.Years + restaFecha2.Years - 2);
+            diferenciaAniosDias[1] = restaFecha1.Days + restaFecha2.Days;
+            return diferenciaAniosDias;
         }
     }
 }

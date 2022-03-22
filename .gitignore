@@ -43,3 +43,12 @@ obj/project.assets.json
 obj/project.nuget.cache
 obj/scaling-meme.csproj.nuget.dgspec.json
 obj/scaling-meme.csproj.nuget.g.props
+obj/scaling-meme.csproj.nuget.g.props
+obj/scaling-meme.csproj.nuget.dgspec.json
+obj/project.nuget.cache
+obj/project.assets.json
+obj/Debug/netcoreapp3.1/scaling-meme.GeneratedMSBuildEditorConfig.editorconfig
+obj/Debug/netcoreapp3.1/scaling-meme.assets.cache
+bin/Debug/netcoreapp3.1/Itenso.TimePeriod.dll
+.vs/scaling-meme/v16/.suo
+.vs/scaling-meme/DesignTimeBuild/.dtbcache.v2

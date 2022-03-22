@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace scaling_meme
+namespace clui.scaling_meme
 {
     class MMFunciones
     {
@@ -13,33 +13,24 @@ namespace scaling_meme
         /// </summary>
         /// <param name="fecha">array que contiene la fecha</param>
         /// <returns></returns>
-        public static int CalcularedadAños(DateTime fecha1,DateTime fecha2,bool fecha1Bisiesta,bool fecha2Bisiesta)
+        public static int CalcularEdadAnios(DateTime fecha1, DateTime fecha2)
         {
-
-
-             int restaFecha = fecha1.Year-fecha2.Year;
-
-
-            return restaFecha;
+            int restaAnios = fecha1.Year - fecha2.Year;
+            return restaAnios;
         }
 
         public static int CalcularEdadDias(DateTime fecha1, DateTime fecha2)
         {
-
-            int restaFecha = fecha1.DayOfYear - fecha2.DayOfYear;
-
-
-            return restaFecha;
+            int restaDias = fecha1.DayOfYear - fecha2.DayOfYear;
+            return restaDias;
         }
-        public static string CalcularEdadAñosYDias(DateTime fecha1, DateTime fecha2, bool fecha1Bisiesta, bool fecha2Bisiesta)
+        public static int[] CalcularDiferencia(DateTime fecha1, DateTime fecha2)
         {
-            DateDiff restaFecha = new DateDiff(fecha1,fecha2);
-            string retorno = (restaFecha.Years +' '+ restaFecha.Days).ToString();
-
-            return  retorno ;
+            int[] diferenciaAniosDias = new int[2];
+            DateDiff restaFecha = new DateDiff(fecha1, fecha2);
+            diferenciaAniosDias[1] = restaFecha.Years;
+            diferenciaAniosDias[2] = restaFecha.Days;
+            return diferenciaAniosDias;
         }
-
-
-
     }
 }
