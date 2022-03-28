@@ -23,41 +23,57 @@ namespace clui.scaling_meme
                 if (locale == "es")
                 {
                     string[] valoresFecha = stringFecha.Split('/');
-                    if (int.TryParse(valoresFecha[0], out _))
+                    if (int.TryParse(valoresFecha[0], out int valorDias))
                     {
                         if (valoresFecha[0].Length == 2)
                         {
-                            if (int.TryParse(valoresFecha[0], out _))
+                            if (valorDias <= 31 && valorDias >= 1)
                             {
-                                if (valoresFecha[1].Length == 2)
+                                if (int.TryParse(valoresFecha[0], out int valorMes))
                                 {
-                                    if (int.TryParse(valoresFecha[0], out _))
+                                    if (valoresFecha[1].Length == 2)
                                     {
-                                        if (valoresFecha[2].Length == 4)
+                                        if (valorMes <= 31 && valorMes >= 1)
                                         {
-                                            returnStatus = true;
+                                            if (int.TryParse(valoresFecha[0], out _))
+                                            {
+                                                if (valoresFecha[2].Length == 4)
+                                                {
+                                                    returnStatus = true;
+                                                }
+                                                else
+                                                {
+                                                    Console.WriteLine("SCFunciones: Error, el valor correspondiente al AÑO no es válido.");
+                                                    returnStatus = false;
+                                                }
+                                            }
+                                            else
+                                            {
+                                                Console.WriteLine("SCFunciones: Error, el valor correspondiente al AÑO no es numérico.");
+                                                returnStatus = false;
+                                            }
                                         }
                                         else
                                         {
-                                            Console.WriteLine("SCFunciones: Error, el valor correspondiente al AÑO no es válido.");
+                                            Console.WriteLine("SCFunciones: Error, el valor correspondiente al MES no corresponde a una fecha válida.");
                                             returnStatus = false;
                                         }
                                     }
                                     else
                                     {
-                                        Console.WriteLine("SCFunciones: Error, el valor correspondiente al AÑO no es numérico.");
+                                        Console.WriteLine("SCFunciones: Error, el valor correspondiente al MES no es válido.");
                                         returnStatus = false;
                                     }
                                 }
                                 else
                                 {
-                                    Console.WriteLine("SCFunciones: Error, el valor correspondiente al MES no es válido.");
+                                    Console.WriteLine("SCFunciones: Error, el valor correspondiente al MES no es numérico.");
                                     returnStatus = false;
                                 }
                             }
                             else
                             {
-                                Console.WriteLine("SCFunciones: Error, el valor correspondiente al MES no es numérico.");
+                                Console.WriteLine("SCFunciones: Error, el valor correspondiente al DÍA no corresponde a una fecha válida.");
                                 returnStatus = false;
                             }
                         }
@@ -99,7 +115,7 @@ namespace clui.scaling_meme
             DateDiff diferenciaFechaACZero = new DateDiff(fechaAC, fechaZero);
             DateDiff diferenciaFechaDCZero = new DateDiff(fechaDC, fechaZero);
             diferenciaAniosDias[0] = Math.Abs(diferenciaFechaACZero.Years + diferenciaFechaDCZero.Years - 2);
-            diferenciaAniosDias[1] = diferenciaFechaACZero.Days + diferenciaFechaDCZero.Days;
+            diferenciaAniosDias[1] = Math.Abs(diferenciaFechaACZero.Days + diferenciaFechaDCZero.Days - 2);
             return diferenciaAniosDias;
         }
     }

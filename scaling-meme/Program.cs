@@ -14,24 +14,24 @@ namespace clui.scaling_meme
                 string segundaFecha = NDFunciones.SolicitarFecha();
                 if (SCFunciones.ValidarFecha(segundaFecha, "es"))
                 {
-                    Console.WriteLine("[PRIMERA FECHA] - {0}", primeraFecha);
-                    Console.WriteLine("[SEGUNDA FECHA] - {0}", segundaFecha);
-
                     CultureInfo cultureInfoES = new CultureInfo("es-ES");
                     DateTime fechaUno = Convert.ToDateTime(primeraFecha, cultureInfoES);
                     DateTime fechaDos = Convert.ToDateTime(segundaFecha, cultureInfoES);
+
+                    Console.WriteLine("[PRIMERA FECHA] - {0}", fechaUno);
+                    Console.WriteLine("[SEGUNDA FECHA] - {0}", fechaDos);
                     int diferenciaAnios = MMFunciones.CalcularEdadAnios(fechaUno, fechaDos);
                     int diferenciaDias = MMFunciones.CalcularEdadDias(fechaUno, fechaDos);
                     Console.WriteLine("Diferencia en años y días:");
-                    Console.WriteLine("- {0} años.", diferenciaAnios);
-                    Console.WriteLine("- {0} días.", diferenciaDias);
+                    Console.WriteLine("\t- {0} años.", diferenciaAnios);
+                    Console.WriteLine("\t- {0} días.", diferenciaDias);
 
-                    Console.WriteLine("[PRIMERA FECHA] - {0} A.C.");
-                    Console.WriteLine("[SEGUNDA FECHA] - {0} D.C.");
+                    Console.WriteLine("[PRIMERA FECHA] - {0} A.C.", fechaUno);
+                    Console.WriteLine("[SEGUNDA FECHA] - {0} D.C.", fechaDos);
                     int[] diferenciaAniosDiasACDC = SCFunciones.DiferenciaFechaAC(fechaUno, fechaDos);
                     Console.WriteLine("Diferencia en años y días:");
-                    Console.WriteLine("- {0} años.", diferenciaAniosDiasACDC[0]);
-                    Console.WriteLine("- {0} días.", diferenciaAniosDiasACDC[1]);
+                    Console.WriteLine("\t- {0} años.", diferenciaAniosDiasACDC[0]);
+                    Console.WriteLine("\t- {0} días.", diferenciaAniosDiasACDC[1]);
                 }
                 else
                 {

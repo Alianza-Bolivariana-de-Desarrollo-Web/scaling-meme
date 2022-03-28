@@ -17,7 +17,7 @@ namespace clui.scaling_meme
             string entradaFecha = "";
             do
             {
-                Console.WriteLine("Introduzca una fecha (DD/MM/YYYY): ");
+                Console.Write("Introduzca una fecha (DD/MM/YYYY): ");
                 entradaFecha = Console.ReadLine();
                 if (entradaFecha.Trim().Length == 0)
                 {

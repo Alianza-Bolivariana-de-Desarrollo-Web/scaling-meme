@@ -18,7 +18,7 @@ namespace clui.scaling_meme
         public static int CalcularEdadAnios(DateTime primeraFecha, DateTime segundaFecha)
         {
             int diferenciaAnios = primeraFecha.Year - segundaFecha.Year;
-            return diferenciaAnios;
+            return Math.Abs(diferenciaAnios);
         }
         /// <summary>
         /// Calcula la diferencia en días entre dos fechas.
@@ -29,7 +29,7 @@ namespace clui.scaling_meme
         public static int CalcularEdadDias(DateTime primeraFecha, DateTime segundaFecha)
         {
             int diferenciaDias = primeraFecha.DayOfYear - segundaFecha.DayOfYear;
-            return diferenciaDias;
+            return Math.Abs(diferenciaDias);
         }
         /// <summary>
         /// Calcula la diferencia en años o en días entre dos fechas.
