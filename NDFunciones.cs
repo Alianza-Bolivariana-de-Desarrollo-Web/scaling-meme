@@ -1,26 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace clui.scaling_meme
 {
+    /// <summary>
+    /// Clase de Nauzet Dorta.
+    /// Actualizada: 28/03/2022.
+    /// </summary>
     class NDFunciones
     {
         /// <summary>
-        /// Solicita una fecha para luego comprobar si el formato de esta es correcto
+        /// Solicita una entrada por teclado que no puede ser vacía.
         /// </summary>
-        /// <returns>Devuelve un string con la entrada introducida</returns>
+        /// <returns>Entrada de tipo string no vacía.</returns>
         public static string SolicitarFecha()
         {       
             string entradaFecha = "";
-            
             do
             {
-                Console.WriteLine("Introduzca una fecha: ");
+                Console.WriteLine("Introduzca una fecha (DD/MM/YYYY): ");
                 entradaFecha = Console.ReadLine();
-                if (entradaFecha.Trim().Length==0)
+                if (entradaFecha.Trim().Length == 0)
                 {
-                    Console.WriteLine("Debe introducir una fecha...");
+                    Console.WriteLine("Debe introducir na entrada no vacía...");
                 }
             } while (entradaFecha.Trim().Length == 0);
             return entradaFecha;      

@@ -1,33 +1,46 @@
 ﻿using Itenso.TimePeriod;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace clui.scaling_meme
 {
+    /// <summary>
+    /// Clase de Mario Manuel.
+    /// Actualizada: 28/03/2022.
+    /// </summary>
     class MMFunciones
     {
-    
         /// <summary>
-        /// funcion que calcula los años entre 1 fecha dada y la actual
+        /// Calcula la diferencia en añor entre dos fechas.
         /// </summary>
-        /// <param name="fecha">array que contiene la fecha</param>
-        /// <returns></returns>
-        public static int CalcularEdadAnios(DateTime fecha1, DateTime fecha2)
+        /// <param name="primeraFecha">Primera fecha D.C.</param>
+        /// <param name="segundaFecha">Segunda fecha D.C.</param>
+        /// <returns>Valor entero correspondiente a la diferencia.</returns>
+        public static int CalcularEdadAnios(DateTime primeraFecha, DateTime segundaFecha)
         {
-            int restaAnios = fecha1.Year - fecha2.Year;
-            return restaAnios;
+            int diferenciaAnios = primeraFecha.Year - segundaFecha.Year;
+            return diferenciaAnios;
         }
-
-        public static int CalcularEdadDias(DateTime fecha1, DateTime fecha2)
+        /// <summary>
+        /// Calcula la diferencia en días entre dos fechas.
+        /// </summary>
+        /// <param name="primeraFecha">Primera fecha D.C.</param>
+        /// <param name="segundaFecha">Segunda fecha D.C.</param>
+        /// <returns>Valor entero correspondiente a la diferencia.</returns>
+        public static int CalcularEdadDias(DateTime primeraFecha, DateTime segundaFecha)
         {
-            int restaDias = fecha1.DayOfYear - fecha2.DayOfYear;
-            return restaDias;
+            int diferenciaDias = primeraFecha.DayOfYear - segundaFecha.DayOfYear;
+            return diferenciaDias;
         }
-        public static int[] CalcularDiferencia(DateTime fecha1, DateTime fecha2)
+        /// <summary>
+        /// Calcula la diferencia en años o en días entre dos fechas.
+        /// </summary>
+        /// <param name="primeraFecha">Primera fecha D.C.</param>
+        /// <param name="segundaFecha">Segunda fecha D.C.</param>
+        /// <returns>Array de int con el valor en años y días (años = pos. 0, días = pos. 1).</returns>
+        public static int[] CalcularDiferencia(DateTime primeraFecha, DateTime segundaFecha)
         {
             int[] diferenciaAniosDias = new int[2];
-            DateDiff restaFecha = new DateDiff(fecha1, fecha2);
+            DateDiff restaFecha = new DateDiff(primeraFecha, segundaFecha);
             diferenciaAniosDias[1] = restaFecha.Years;
             diferenciaAniosDias[2] = restaFecha.Days;
             return diferenciaAniosDias;

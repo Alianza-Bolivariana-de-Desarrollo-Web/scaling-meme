@@ -17,11 +17,11 @@ namespace clui.scaling_meme
                     CultureInfo cultureInfoES = new CultureInfo("es-ES");
                     DateTime fechaUno = Convert.ToDateTime(primeraFecha, cultureInfoES);
                     DateTime fechaDos = Convert.ToDateTime(segundaFecha, cultureInfoES);
-                    int diferenciaAnios=MMFunciones.CalcularEdadAnios(fechaUno, fechaDos);
-                    int diferenciaDias= MMFunciones.CalcularEdadDias(fechaUno, fechaDos);
+                    int diferenciaAnios = MMFunciones.CalcularEdadAnios(fechaUno, fechaDos);
+                    int diferenciaDias = MMFunciones.CalcularEdadDias(fechaUno, fechaDos);
                     Console.WriteLine("La diferencia entre las fechas dadas es: ");
-                    Console.WriteLine("{0} años", diferenciaAnios);
-                    Console.WriteLine("{0} días", diferenciaDias);
+                    Console.WriteLine("- {0} años", diferenciaAnios);
+                    Console.WriteLine("- {0} días", diferenciaDias);
                 }
                 else
                 {
@@ -34,7 +34,6 @@ namespace clui.scaling_meme
             }
             Console.WriteLine("Pulsa una tecla para finalizar...");
             Console.ReadKey();
-
         }
     }
 }

@@ -1,9 +1,12 @@
 ﻿using Itenso.TimePeriod;
 using System;
-using System.Globalization;
 
 namespace clui.scaling_meme
 {
+    /// <summary>
+    /// Clase de Sergio Coello.
+    /// Actualizada: 28/03/2022.
+    /// </summary>
     public class SCFunciones
     {
         /// <summary>
@@ -11,7 +14,6 @@ namespace clui.scaling_meme
         /// </summary>
         /// <param name="stringFecha">Argumento de tipo string con el valor de la fecha (Ej. 01/01/2022).</param>
         /// <param name="locale">Argumento de tipo string con el valor de la localización (Ej. es).</param>
-        /// <param name="dateTimeObject">Asigna el valor convertido de string a DateTime.</param>
         /// <returns>true ó false (true = es una fecha válida, false = no es una fecha válida).</returns>
         public static bool ValidarFecha(string stringFecha, string locale)
         {
@@ -21,15 +23,15 @@ namespace clui.scaling_meme
                 if (locale == "es")
                 {
                     string[] valoresFecha = stringFecha.Split('/');
-                    if (int.TryParse(valoresFecha[0], out int valorDia))
+                    if (int.TryParse(valoresFecha[0], out _))
                     {
                         if (valoresFecha[0].Length == 2)
                         {
-                            if (int.TryParse(valoresFecha[0], out int valorMes))
+                            if (int.TryParse(valoresFecha[0], out _))
                             {
                                 if (valoresFecha[1].Length == 2)
                                 {
-                                    if (int.TryParse(valoresFecha[0], out int valorAnio))
+                                    if (int.TryParse(valoresFecha[0], out _))
                                     {
                                         if (valoresFecha[2].Length == 4)
                                         {
@@ -84,14 +86,20 @@ namespace clui.scaling_meme
             }
             return returnStatus;
         }
-        public static int[] DiferenciaFechaAC(DateTime fecha1, DateTime fecha2)
+        /// <summary>
+        /// Calcula la diferencia en años y días entre una fecha A.C. y D.C.
+        /// </summary>
+        /// <param name="fechaAC">Fecha A.C.</param>
+        /// <param name="fechaDC">Fecha D.C.</param>
+        /// <returns>Array de int con el valor en años y días (años = pos. 0, días = pos. 1).</returns>
+        public static int[] DiferenciaFechaAC(DateTime fechaAC, DateTime fechaDC)
         {
             int[] diferenciaAniosDias = new int[2];
             DateTime fechaZero = new DateTime(1, 1, 1);
-            DateDiff restaFecha1 = new DateDiff(fecha1, fechaZero);
-            DateDiff restaFecha2 = new DateDiff(fecha2, fechaZero);
-            diferenciaAniosDias[0] = Math.Abs(restaFecha1.Years + restaFecha2.Years - 2);
-            diferenciaAniosDias[1] = restaFecha1.Days + restaFecha2.Days;
+            DateDiff diferenciaFechaACZero = new DateDiff(fechaAC, fechaZero);
+            DateDiff diferenciaFechaDCZero = new DateDiff(fechaDC, fechaZero);
+            diferenciaAniosDias[0] = Math.Abs(diferenciaFechaACZero.Years + diferenciaFechaDCZero.Years - 2);
+            diferenciaAniosDias[1] = diferenciaFechaACZero.Days + diferenciaFechaDCZero.Days;
             return diferenciaAniosDias;
         }
     }
