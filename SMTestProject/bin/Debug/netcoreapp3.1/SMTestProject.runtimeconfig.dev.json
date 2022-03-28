@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\TCG-Server\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\TCG-Server\\.nuget\\packages"
+    ]
+  }
+}
