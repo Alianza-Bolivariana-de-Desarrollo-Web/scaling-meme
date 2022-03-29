@@ -14,10 +14,12 @@ namespace clui.scaling_meme
         /// </summary>
         /// <param name="stringFecha">Argumento de tipo string con el valor de la fecha (Ej. 01/01/2022).</param>
         /// <param name="locale">Argumento de tipo string con el valor de la localización (Ej. es).</param>
+        /// <param name="mensajeDeError">Devuelve por referencia de tipo string el mensaje de error.</param>
         /// <returns>true ó false (true = es una fecha válida, false = no es una fecha válida).</returns>
-        public static bool ValidarFecha(string stringFecha, string locale)
+        public static bool ValidarFecha(string stringFecha, string locale, ref string mensajeDeError)
         {
             bool returnStatus = false;
+            mensajeDeError = "";
             if (stringFecha.Trim().Length == 10)
             {
                 if (locale == "es")
@@ -43,55 +45,55 @@ namespace clui.scaling_meme
                                                 }
                                                 else
                                                 {
-                                                    Console.WriteLine("SCFunciones: Error, el valor correspondiente al AÑO no es válido.");
+                                                    mensajeDeError = "SCFunciones: Error, el valor correspondiente al AÑO no es válido.";
                                                     returnStatus = false;
                                                 }
                                             }
                                             else
                                             {
-                                                Console.WriteLine("SCFunciones: Error, el valor correspondiente al AÑO no es numérico.");
+                                                mensajeDeError = "SCFunciones: Error, el valor correspondiente al AÑO no es numérico.";
                                                 returnStatus = false;
                                             }
                                         }
                                         else
                                         {
-                                            Console.WriteLine("SCFunciones: Error, el valor correspondiente al MES no corresponde a una fecha válida.");
+                                            mensajeDeError = "SCFunciones: Error, el valor correspondiente al MES no corresponde a una fecha válida.";
                                             returnStatus = false;
                                         }
                                     }
                                     else
                                     {
-                                        Console.WriteLine("SCFunciones: Error, el valor correspondiente al MES no es válido.");
+                                        mensajeDeError = "SCFunciones: Error, el valor correspondiente al MES no es válido.";
                                         returnStatus = false;
                                     }
                                 }
                                 else
                                 {
-                                    Console.WriteLine("SCFunciones: Error, el valor correspondiente al MES no es numérico.");
+                                    mensajeDeError = "SCFunciones: Error, el valor correspondiente al MES no es numérico.";
                                     returnStatus = false;
                                 }
                             }
                             else
                             {
-                                Console.WriteLine("SCFunciones: Error, el valor correspondiente al DÍA no corresponde a una fecha válida.");
+                                mensajeDeError = "SCFunciones: Error, el valor correspondiente al DÍA no corresponde a una fecha válida.";
                                 returnStatus = false;
                             }
                         }
                         else
                         {
-                            Console.WriteLine("SCFunciones: Error, el valor correspondiente al DÍA no es válido.");
+                            mensajeDeError = "SCFunciones: Error, el valor correspondiente al DÍA no es válido.";
                             returnStatus = false;
                         }
                     }
                     else
                     {
-                        Console.WriteLine("SCFunciones: Error, el valor correspondiente al DÍA no es numérico.");
+                        mensajeDeError = "SCFunciones: Error, el valor correspondiente al DÍA no es numérico.";
                         returnStatus = false;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("SCFunciones: Error, no se ha especificado una región.");
+                    mensajeDeError = "SCFunciones: Error, no se ha especificado una región.";
                     returnStatus = false;
                 }
             }
