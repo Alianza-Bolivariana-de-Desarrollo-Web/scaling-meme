@@ -26,7 +26,7 @@ namespace clui.scaling_meme
                     DateTime fechaUno = Convert.ToDateTime(primeraFecha, cultureInfoES);
                     DateTime fechaDos = Convert.ToDateTime(segundaFecha, cultureInfoES);
 
-                    Console.WriteLine("[PRIMERA FECHA] - {0} A.C.", fechaUno);
+                    Console.WriteLine("[PRIMERA FECHA] - {0} D.C.", fechaUno);
                     Console.WriteLine("[SEGUNDA FECHA] - {0} D.C.", fechaDos);
                     int[] diferenciaAniosDiasACDC = MMFunciones.CalcularDiferencia(fechaUno, fechaDos);
                     Console.WriteLine("Diferencia en años y días:");

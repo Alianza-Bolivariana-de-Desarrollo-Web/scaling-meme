@@ -99,7 +99,7 @@ namespace clui.scaling_meme
             }
             else
             {
-                Console.WriteLine("SCFunciones: Error, la fecha no tiene la longitud exacta.");
+                mensajeDeError = "SCFunciones: Error, la fecha no tiene la longitud exacta.";
                 returnStatus = false;
             }
             return returnStatus;

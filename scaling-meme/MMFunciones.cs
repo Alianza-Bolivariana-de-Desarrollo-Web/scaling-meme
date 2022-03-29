@@ -41,8 +41,8 @@ namespace clui.scaling_meme
         {
             int[] diferenciaAniosDias = new int[2];
             DateDiff restaFecha = new DateDiff(primeraFecha, segundaFecha);
-            diferenciaAniosDias[1] = restaFecha.Years;
-            diferenciaAniosDias[2] = restaFecha.Days;
+            diferenciaAniosDias[0] = restaFecha.Years;
+            diferenciaAniosDias[1] = restaFecha.Days;
             return diferenciaAniosDias;
         }
     }
